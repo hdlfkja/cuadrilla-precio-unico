@@ -1,0 +1,81 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: v.$fuentePrincipal;
+    height: max-content;
+
+    @include m.tablet {
+        height: 100vh;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+h2 {
+    color: v.$blanco;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+p {
+    margin: 0;
+    line-height: 2.5rem;
+    color: v.$azulGrisaceo;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 85%;
+    max-width: 70rem;
+    margin: 10rem 0;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header"
+                            "seccion footer";
+        margin: 0;
+    }
+}
+
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$grisClaro;
+}
+
+.boton {
+    background-color: v.$amarilloBrillante;
+    text-align: center;
+    color: v.$blanco;
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    font-weight: bold;
+}

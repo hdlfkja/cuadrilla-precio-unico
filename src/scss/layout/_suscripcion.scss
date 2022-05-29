@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.suscripcion {
+    background-color: v.$cian;
+    padding: 3rem 2.5rem;
+
+    @include m.tablet {
+        border-radius: 0 0 0 .8rem;
+        -webkit-border-radius: 0 0 0 .8rem;
+        -moz-border-radius: 0 0 0 .8rem;
+        -ms-border-radius: 0 0 0 .8rem;
+        -o-border-radius: 0 0 0 .8rem;
+}
+
+    .suscripcion__titulo {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+    
+    .suscripcion__texto {
+        color: v.$grisClaro;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        color: v.$blanco;
+        margin-right: .5rem;
+    }
+    
+    .suscripcion__texto--size {
+        opacity: .5;
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+    .suscripcion__texto--color {
+        color: v.$blanco;
+    }
+}
